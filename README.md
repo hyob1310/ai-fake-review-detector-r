@@ -18,3 +18,10 @@ computational cost.
 
 Based on these results, logistic regression was selected as the preferred
 model for large-scale fake review detection.
+
+## Model Performance Visualization
+
+The ROC curve below illustrates the performance of the logistic
+regression model across classification thresholds.
+
+![ROC Curve – Logistic Regression](reports/roc_curve_logistic.png)
