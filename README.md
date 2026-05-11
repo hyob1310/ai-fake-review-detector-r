@@ -37,6 +37,8 @@ The project followed a natural language processing and machine learning workflow
 - Train supervised classification models
 - Evaluate models using ROC-AUC performance metrics
 
+ROC-AUC was selected as the primary evaluation metric because it measures classification performance across multiple probability thresholds and is well-suited for binary classification problems.
+
 ### Models Evaluated
 - Logistic Regression with Ridge regularization
 - Random Forest classifier
@@ -56,12 +58,11 @@ TF-IDF (Term Frequency–Inverse Document Frequency) was used to convert review 
 ## Results
 
 Two machine learning models were trained to detect deceptive reviews using
-TF-IDF text features. Because TF-IDF generates high-dimensional sparse matrices, Ridge regularization helped reduce overfitting while maintaining strong predictive performance.
-
-| Model               | AUC    | Accuracy | Precision |
-| ------------------- | ------ | -------- | --------- |
-| Logistic Regression | 0.9334 | 89%      | 91%       |
-| Random Forest       | 0.9249 | 87%      | 88%       |
+TF-IDF text features. Because TF-IDF produces high-dimensional sparse feature matrices, Ridge regularization helped reduce overfitting while maintaining strong predictive performance.
+| Model               | AUC    | Accuracy | Precision | F1-Score |
+| ------------------- | ------ | -------- | --------- | -------- |
+| Logistic Regression | 0.9334 | 89%      | 91%       | 0.90     |
+| Random Forest       | 0.9249 | 87%      | 88%       | 0.87     |
 
 Logistic regression achieved the strongest balance between predictive performance, computational efficiency, and interpretability. The model also scaled more effectively to high-dimensional sparse TF-IDF features compared to Random Forest.
 
@@ -107,3 +108,24 @@ Future versions of the model could incorporate:
 - deep learning approaches
 - multilingual review detection
 - real-time review monitoring pipelines
+
+---
+
+## Conclusion
+This project demonstrates how NLP and machine learning techniques can be used to identify deceptive online reviews with strong predictive performance. The results highlight the effectiveness of TF-IDF–based text classification for scalable fraud detection and automated content moderation applications.
+
+---
+
+## Skills Demonstrated
+- Natural Language Processing (NLP)
+- TF-IDF feature engineering
+- Machine learning classification
+- Text preprocessing in R
+- Sparse matrix handling
+- Model evaluation using ROC-AUC
+- Predictive analytics
+- Data visualization
+
+
+
+
